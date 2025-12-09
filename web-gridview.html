@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Ecommerce Grid View</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                sans-serif;
+        }
+
+        .rating-stars {
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Top header -->
+    <header class="w-full bg-white border-b">
+        <div class="max-w-7xl mx-auto flex items-center justify-between py-3 px-4">
+            <!-- Brand + search -->
+            <div class="flex items-center space-x-6">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-blue-500 rounded flex items-center justify-center text-white font-bold">
+                        B
+                    </div>
+                    <span class="font-semibold text-lg">Brand</span>
+                </div>
+
+                <form class="hidden md:flex items-center border rounded-full overflow-hidden">
+                    <input class="px-4 py-2 w-64 text-sm outline-none" type="text" placeholder="Search" />
+                    <select class="border-l px-3 py-2 text-sm text-gray-600 bg-gray-50 outline-none">
+                        <option>All category</option>
+                    </select>
+                    <button type="submit" class="bg-blue-500 text-white px-5 py-2 text-sm font-medium">
+                        Search
+                    </button>
+                </form>
+            </div>
+
+            <!-- Right actions -->
+            <div class="flex items-center space-x-6 text-sm">
+                <button class="flex items-center space-x-1 text-gray-600">
+                    <span class="inline-block w-5 h-5 bg-gray-200 rounded-full"></span>
+                    <span>Profile</span>
+                </button>
+                <button class="flex items-center space-x-1 text-gray-600">
+                    <span class="inline-block w-5 h-5 bg-gray-200 rounded-full"></span>
+                    <span>Message</span>
+                </button>
+                <button class="flex items-center space-x-1 text-gray-600">
+                    <span class="inline-block w-5 h-5 bg-gray-200 rounded-full"></span>
+                    <span>Orders</span>
+                </button>
+                <button class="flex items-center space-x-1 text-gray-600">
+                    <span class="inline-block w-5 h-5 bg-gray-200 rounded-full"></span>
+                    <span>My cart</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Second bar -->
+        <div class="border-t">
+            <div class="max-w-7xl mx-auto flex items-center justify-between py-2 px-4 text-sm">
+                <nav class="flex items-center space-x-4">
+                    <button class="flex items-center space-x-2 font-medium text-gray-700">
+                        <span class="inline-block w-4 h-4 bg-gray-200 rounded-sm"></span>
+                        <span>All category</span>
+                    </button>
+                    <a href="#" class="text-gray-600">Hot offers</a>
+                    <a href="#" class="text-gray-600">Gift boxes</a>
+                    <a href="#" class="text-gray-600">Projects</a>
+                    <a href="#" class="text-gray-600">Menu item</a>
+                    <a href="#" class="text-gray-400">Help</a>
+                </nav>
+
+                <div class="flex items-center space-x-4 text-gray-600">
+                    <div class="flex items-center space-x-1">
+                        <span>English, USD</span>
+                        <span class="inline-block w-4 h-4 bg-gray-200 rounded-sm"></span>
+                    </div>
+                    <div class="flex items-center space-x-1">
+                        <span>Ship to</span>
+                        <span class="inline-block w-5 h-5 bg-gray-200 rounded-full"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="max-w-7xl mx-auto px-4 mt-4 text-xs text-gray-500">
+        <span>Home</span>
+        <span class="mx-1">/</span>
+        <span>Clothings</span>
+        <span class="mx-1">/</span>
+        <span>Men's wear</span>
+        <span class="mx-1">/</span>
+        <span class="text-gray-600">Summer clothing</span>
+    </div>
+
+    <!-- Main content -->
+    <main class="max-w-7xl mx-auto px-4 mt-3 mb-10 grid grid-cols-12 gap-5">
+
+        <!-- Sidebar -->
+        <aside class="col-span-3 text-sm space-y-6">
+            <!-- Category -->
+            <section class="bg-white border rounded-lg p-4">
+                <div class="flex items-center justify-between mb-3">
+                    <h2 class="font-semibold text-gray-800">Category</h2>
+                </div>
+                <div class="space-y-1 text-gray-600">
+                    <button class="block w-full text-left">Mobile accessory</button>
+                    <button class="block w-full text-left">Electronics</button>
+                    <button class="block w-full text-left">Smartphones</button>
+                    <button class="block w-full text-left">Modern tech</button>
+                    <button class="text-blue-600 text-xs mt-1">See all</button>
+                </div>
+            </section>
+
+            <!-- Brands -->
+            <section class="bg-white border rounded-lg p-4">
+                <div class="flex items-center justify-between mb-3">
+                    <h2 class="font-semibold text-gray-800">Brands</h2>
+                </div>
+                <div class="space-y-2 text-gray-600">
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" class="rounded border-gray-300" checked />
+                        <span>Samsung</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" class="rounded border-gray-300" checked />
+                        <span>Apple</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="          <label class=" flex items-center space-x-2">
+                        <input type="checkbox" class="rounded border-gray-300" />
+                        <span>Huawei</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" class="rounded border-gray-300" />
+                        <span>Pocco</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" class="rounded border-gray-300" />
+                        <span>Lenovo</span>
+                    </label>
+                    <button class="text-blue-600 text-xs mt-1">See all</button>
+                </div>
+            </section>
+
+            <!-- Features -->
+            <section class="bg-white border rounded-lg p-4">
+                <h2 class="font-semibold text-gray-800 mb-3">Features</h2>
+                <div class="space-y-2 text-gray-600">
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" class="rounded border-gray-300" checked />
+                        <span>Metallic</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" class="rounded border-gray-300" />
+                        <span>Plastic cover</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" class="rounded border-gray-300" />
+                        <span>8GB Ram</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" class="rounded border-gray-300" />
+                        <span>Super power</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" class="rounded border-gray-300" />
+                        <span>Large Memory</span>
+                    </label>
+                    <button class="text-blue-600 text-xs mt-1">See all</button>
+                </div>
+            </section>
+
+            <!-- Price range -->
+            <section class="bg-white border rounded-lg p-4">
+                <div class="flex items-center justify-between mb-3">
+                    <h2 class="font-semibold text-gray-800">Price range</h2>
+                </div>
+                <div class="space-y-3">
+                    <div class="w-full h-1 bg-gray-200 rounded-full relative">
+                        <div class="absolute left-1/4 right-1/6 h-1 bg-blue-500 rounded-full"></div>
+                        <div class="absolute -top-1 left-1/4 w-3 h-3 bg-white border border-blue-500 rounded-full">
+                        </div>
+                        <div class="absolute -top-1 right-1/6 w-3 h-3 bg-white border border-blue-500 rounded-full">
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-2 text-xs">
+                        <div class="flex items-center space-x-1 border rounded px-2 py-1">
+                            <span class="text-gray-500">Min</span>
+                            <input type="number" class="w-16 outline-none text-right" value="0" />
+                        </div>
+                        <span class="text-gray-400">-</span>
+                        <div class="flex items-center space-x-1 border rounded px-2 py-1">
+                            <span class="text-gray-500">Max</span>
+                            <input type="number" class="w-16 outline-none text-right" value="999999" />
+                        </div>
+                    </div>
+                    <button class="px-3 py-1.5 bg-blue-500 text-white text-xs rounded-md">Apply</button>
+                </div>
+            </section>
+
+            <!-- Condition -->
+            <section class="bg-white border rounded-lg p-4">
+                <div class="flex items-center justify-between mb-3">
+                    <h2 class="font-semibold text-gray-800">Condition</h2>
+                </div>
+                <div class="space-y-2 text-gray-600">
+                    <label class="flex items-center space-x-2">
+                        <input type="radio" name="condition" class="border-gray-300" />
+                        <span>Any</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="radio" name="condition" class="border-gray-300" />
+                        <span>Refurbished</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="radio" name="condition" class="border-gray-300" checked />
+                        <span>Brand new</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="radio" name="condition" class="border-gray-300" />
+                        <span>Old items</span>
+                    </label>
+                </div>
+            </section>
+
+            <!-- Ratings -->
+            <section class="bg-white border rounded-lg p-4">
+                <div class="flex items-center justify-between mb-3">
+                    <h2 class="font-semibold text-gray-800">Ratings</h2>
+                </div>
+                <div class="space-y-1 text-xs">
+                    <button class="flex items-center space-x-1 text-amber-400 rating-stars">
+                        <span>★★★★★</span><span class="text-gray-500">&nbsp;and up</span>
+                    </button>
+                    <button class="flex items-center space-x-1 text-amber-400 rating-stars">
+                        <span>★★★★</span><span class="text-gray-500">☆ &nbsp;and up</span>
+                    </button>
+                    <button class="flex items-center space-x-1 text-amber-400 rating-stars">
+                        <span>★★★</span><span class="text-gray-500">☆☆ &nbsp;and up</span>
+                    </button>
+                    <button class="flex items-center space-x-1 text-amber-400 rating-stars">
+                        <span>★★</span><span class="text-gray-500">☆☆☆ &nbsp;and up</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Manufacturer (collapsed) -->
+            <section class="bg-white border rounded-lg p-4">
+                <div class="flex items-center justify-between mb-1">
+                    <h2 class="font-semibold text-gray-800">Manufacturer</h2>
+                    <span class="inline-block w-4 h-4 bg-gray-200 rounded-sm"></          <span class="inline-block w-4 h-4 bg-gray-200 rounded-sm"></span>
+        </div>
+        <p class="text-xs text-gray-400 mt-1">Collapsed list placeholder</p>
+      </section>
+    </aside>
+
+    <!-- Right content: filters + grid -->
+    <section class="col-span-9 space-y-4">
+
+      <!-- Top bar with count, tags, toggles -->
+      <div class="bg-white border rounded-lg px-4 py-3 text-sm flex flex-col gap-3">
+        <div class="flex items-center justify-between">
+          <div class="text-gray-600">
+            <span class="font-semibold text-gray-800">12,911 items</span>
+            <span class="ml-1">in</span>
+            <span class="font-semibold text-gray-800 ml-1">Mobile accessory</span>
+          </div>
+          <div class="flex items-center space-x-4">
+            <label class="flex items-center space-x-1 text-gray-600">
+              <input type="checkbox" class="rounded border-gray-300" checked />
+              <span>Verified only</span>
+            </label>
+            <div class="flex items-center space-x-1">
+              <span class="text-gray-500">Featured</span>
+              <span class="inline-block w-3 h-3 bg-gray-300 rounded-sm"></span>
+            </div>
+            <div class="flex items-center space-x-1">
+              <button class="w-8 h-8 border rounded flex items-center justify-center">
+                <span class="w-4 h-4 bg-gray-300 block"></span>
+              </button>
+              <button class="w-8 h-8 border rounded flex items-center justify-center bg-gray-100">
+                <span class="w-4 h-4 bg-gray-500 block"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Selected filter chips -->
+        <div class="flex flex-wrap items-center gap-2">
+          <div class="inline-flex items-center bg-gray-100 border rounded-full px-3 py-1 text-xs text-gray-700">
+            Samsung
+            <span class="ml-1 text-gray-400 cursor-pointer">×</span>
+          </div>
+          <div class="inline-flex items-center bg-gray-100 border rounded-full px-3 py-1 text-xs text-gray-700">
+            Apple
+            <span class="ml-1 text-gray-400 cursor-pointer">×</span>
+          </div>
+          <div class="inline-flex items-center bg-gray-100 border rounded-full px-3 py-1 text-xs text-gray-700">
+            Pocco
+            <span class="ml-1 text-gray-400 cursor-pointer">×</span>
+          </div>
+          <div class="inline-flex items-center bg-gray-100 border rounded-full px-3 py-1 text-xs text-gray-700">
+            Metallic
+            <span class="ml-1 text-gray-400 cursor-pointer">×</span>
+          </div>
+          <div class="inline-flex items-center bg-gray-100 border rounded-full px-3 py-1 text-xs text-gray-700">
+            4 star
+            <span class="ml-1 text-gray-400 cursor-pointer">×</span>
+          </div>
+          <div class="inline-flex items-center bg-gray-100 border rounded-full px-3 py-1 text-xs text-gray-700">
+            3 star
+            <span class="ml-1 text-gray-400 cursor-pointer">×</span>
+          </div>
+          <button class="text-xs text-blue-600 ml-1">
+            Clear all filter
+          </button>
+        </div>
+      </div>
+
+      <!-- Products grid -->
+      <div class="grid grid-cols-3 gap-4">
+        <!-- Card template repeated for 9 items -->
+
+        <!-- 1 -->
+        <article class="bg-white border rounded-lg p-3 flex flex-col">
+          <div class="relative mb-3">
+            <div class="w-full h-44 bg-red-100 rounded flex items-center justify-center overflow-hidden">
+              <img src="https://via.placeholder.com/220x220" class="w-full h-full object-cover" alt="">
+            </div>
+            <button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white border flex items-center justify-center text-gray-400 hover:text-red-500">
+              ♥
+            </button>
+          </div>
+          <div class="flex-1 flex flex-col">
+            <div class="flex items-center space-x-2 text-sm mb-1">
+              <span class="font-semibold text-gray-900">$99.50</span>
+              <span class="text-xs text-gray-400 line-through">$132.00</span>
+            </div>
+            <div class="flex items-center text-[11px] text-gray-500 space-x-1 mb-1">
+              <span class="text-amber-400 rating-stars">★★★★☆</span>
+              <span>7.5</span>
+            </div>
+            <p class="text-xs text-gray-800 leading-snug">
+              GoPro HERO6 4K Action<br>Camera - Black
+            </p>
+          </div>
+        </article>
+
+        <!-- 2 -->
+        <article class="bg-white border rounded-lg p-3 flex flex-col">
+          <div class="relative mb-3">
+            <div class="w-full h-44 bg-blue-100 rounded flex items-center justify-center overflow-hidden">
+              <img src="https://via.placeholder.com/220x220" class="w-full h-full object-cover" alt="">
+            </div>
+            <button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white border flex items-center justify-center text-gray-400 hover:text-red-500">
+              ♥
+            </button>
+          </div>
+          <div class="flex-1 flex flex-col">
+            <div class="flex items-center space-x-2 text-sm mb-1">
+              <span class="font-semibold text-gray-900">$99.50</span>
+              <span class="text-xs text-gray-400 line-through">$132.00</span>
+            </div>
+            <div class="flex items-center text-[11px] text-gray-500 space-x-1 mb-1">
+              <span class="text-amber-400 rating-stars">★★★★☆</span>
+              <span>7.5</span>
+            </div>
+            <p class="text-xs text-gray-800 leading-snug">
+              GoPro HERO6 4K Action<br>Camera - Black
+            </p>
+          </div>
+        </article>
+
+        <!-- 3 -->
+        <article class="bg-white border rounded-lg p-3 flex flex-col">
+          <div class="relative mb-3">
+            <div class="w-full h-44 bg-purple-100 rounded flex items-center justify-center overflow-hidden">
+              <img src="https://via.placeholder.com/220x220" class="w-full h-full object-cover" alt="">
+            </div>
+            <button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white border flex items-center justify-center text-gray-400 hover:text-red-500">
+              ♥
+            </button>
+          </div>
+          <div class="flex-1 flex flex-col">
+            <div class="flex items-center space-x-2 text-sm mb-1">
+              <span class="font-semibold text-gray-900">$99.50</span>
+              <span class="text-xs text-gray-400 line-through">$132.00</span>
+            </div>
+            <div class="flex items-center text-[11px] text-gray-500 space-x-1 mb-1">
+              <span class="text-amber-400 rating-stars">★★★★☆</span>
+              <span>7.5</span>
+            </div>
+            <p class="text-xs text-gray-800 leading-snug">
+              GoPro HERO6 4K Action<br>Camera - Black
+            </p>
+          </div>
+        </article>
+
+        <!-- 4 -->
+        <article class="bg-white border rounded-lg p-3 flex flex-col">
+          <div class="relative mb-3">
+            <div class="w-full h-44 bg-gray-100 rounded flex items-center justify-center overflow-hidden">
+              <img src="https://via.placeholder.com/220x220" class="w-full h-full object-cover" alt="">
+            </div>
+            <button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white border flex items-center justify-center text-gray-400 hover:text-red-500">
+              ♥
+            </button>
+          </div>
+          <div class="flex-1 flex flex-col">
+            <div class="flex items-center space-x-2 text-sm mb-1">
+              <span class="font-semibold text-gray-900">$99.50</span>
+              <span class="text-xs text-gray-400 line-through">$132.00</span>
+            </div>
+            <div class="flex items-center text-[11px] text-gray-500 space-x-1 mb-1">
+              <span class="text-amber-400 rating-stars">★★★★☆</span>
+              <span>7.5</span>
+            </div>
+            <p class="text-xs text-gray-800 leading-snug">
+              GoPro HERO6 4K Action<br>Camera - Black
+            </p>
+          </div>
+        </article>
+
+        <!-- 5 -->
+        <article class="bg-white border rounded-lg p-3 flex flex-col">
+          <div class="relative mb-3">
+            <div class="w-full h-44 bg-orange-100 rounded flex items-center justify-center overflow-hidden">
+              <img src="https://via.placeholder.com/220x220" class="w-full h-full object-cover" alt="">
+            </div>
+            <button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white border flex items-center justify-center text-gray-400 hover:text-red-500">
+              ♥
+            </button>
+          </div>
+          <div class="flex-1 flex flex-col">
+            <div class="flex items-center space-x-2 text-sm mb-1">
+              <span class="font-semibold text-gray-900">$99.50</span>
+              <span class="text-xs text-gray-400 line-through">$132.00</span>
+            </div>
+            <div class="flex items-center text-[11px] text-gray-500 space-x-1 mb-1">
+              <span class="text-amber-400 rating-stars">★★★★☆</span>
+              <span>7.5</span>
+            </div>
+            <p class="text-xs text-gray-800 leading-snug">
+              GoPro HERO6 4K Action<br>Camera - Black
+            </p>
+          </div>
+        </article>
+
+        <!-- 6 -->
+        <article class="bg-white border rounded-lg p-3 flex flex-col">
+          <div class="relative mb-3">
+            <div class="w-full h-44 bg-blue-100 rounded flex items-center justify-center overflow-hidden">
+              <img src="https://via.placeholder.com/220x220" class="w-full h-full object-cover" alt="">
+            </div>
+            <button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white border flex items-center justify-center text-gray-400 hover:text-red-500">
+              ♥
+            </button>
+          </div>
+          <div class="flex-1 flex flex-col">
+            <div class="flex items-center space-x-2 text-sm mb-1">
+              <span class="font-semibold text-gray-900">$99.50</span>
+              <span class="text-xs text-gray-400 line-through">$132.00</span>
+            </div>
+            <div class="flex items-center text-[11px] text-gray-500 space-x-1 mb-1">
+              <span class="text-amber-400 rating-stars">★★★★☆</span>
+              <span>7.5</span>
+            </div>
+            <p class="text-xs text-gray-800 leading-snug">
+              GoPro HERO6 4K Action<br>Camera - Black
+            </p>
+          </div>
+        </article>
+
+        <!-- 7 -->
+        <article class="bg-white border rounded-lg p-3 flex flex-col">
+          <div class="relative mb-3">
+            <div class="w-full h-44 bg-gray-100 rounded flex items-center justify-center overflow-hidden">
+              <img src="https://via.placeholder.com/220x220" class="w-full h-full object-cover" alt="">
+            </div>
+            <button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white border flex items-center justify-center text-gray-400 hover:text-red-500">
+              ♥
+            </button>
+          </div>
+          <div class="flex-1 flex flex-col">
+            <div class="flex items-center space-x-2 text-sm mb-1">
+              <span class="font-semibold text-gray-900">$99.50</span>
+              <span class="text-xs text-gray-400 line-through">$132.00</span>
+            </div>
+            <div class="flex items-center text-[11px] text-gray-500 space-x-1 mb-1">
+              <span class="text-amber-400 rating-stars">★★★★☆</span>
+              <span>7.5</span>
+            </div>
+            <p class="text-xs text-gray-800 leading-snug">
+              GoPro HERO6 4K Action<br>Camera - Black
+            </p>
+          </div>
+        </article>
+
+        <!-- 8 -->
+        <article class="bg-white border rounded-lg p-3 flex flex-col">
+          <div class="relative mb-3">
+            <div class="w-full h-44 bg-gray-100 rounded flex items-center justify-center overflow-hidden">
+              <img src="https://via.placeholder.com/220x220" class="w-full h-full object-cover" alt="">
+            </div>
+            <button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white border flex items-center justify-center text-gray-400 hover:text-red-500">
+              ♥
+            </button>
+          </div>
+          <div class="flex-1 flex flex-col">
+            <div class="flex items-center space-x-2 text-sm mb-1">
+              <span class="font-semibold text-gray-900">$99.50</span>
+              <span class="text-xs text-gray-400 line-through">$132.00</span>
+            </div>
+            <div class="flex items-center text-[11px] text-gray-500 space-x-1 mb-1">
+              <span class="text-amber-400 rating-stars">★★★★☆</span>
+              <span>7.5</span>
+            </div>
+            <p class="text-xs text-gray-800 leading-snug">
+              GoPro HERO6 4K Action<br>Camera - Black
+            </p>
+          </div>
+        </article>
+
+        <!-- 9 -->
+        <article class="bg-white border rounded-lg p-3 flex flex-col">
+          <div class="relative mb-3">
+            <div class="w-full h-44 bg-red-100 rounded flex items-center justify-center overflow-hidden">
+              <img src="https://via.placeholder.com/220x220" class="w-full h-full object-cover" alt="">
+            </div>
+            <button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white border flex items-center justify-center text-gray-400 hover:text-red-500">
+              ♥
+            </button>
+          </div>
+          <div class="flex-1 flex flex-col">
+            <div class="flex items-center space-x-2 text-sm mb-1">
+              <span class="font-semibold text-gray-900">$99.50</span>
+              <span class="text-xs text-gray-400 line-through">$132.00</span>
+            </div>
+            <div class="flex items-center text-[11px] text-gray-500 space-x-1 mb-1">
+              <span class="text-amber-400 rating-stars">★★★★☆</span>
+              <span>7.5</span>
+            </div>
+            <p class="text-xs text-gray-800 leading-snug">
+              GoPro HERO6 4K Action<br>Camera - Black
+            </p>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Bottom pagination -->
+      <div class="flex items-center justify-between text-xs text-gray-600 mt-3">
+        <div class="flex items-center space-x-1">
+          <span>Show</span>
+          <select class="border rounded px-2 py-1 bg-white">
+            <option selected>10</option>
+            <option>20</option>
+            <option>50</option>
+          </select>
+        </div>
+        <div class="flex items-center space-x-1">
+          <button class="w-8 h-8 border rounded flex items-center justify-center text-gray-400">
+            &lt;
+          </button>
+          <button class="w-8 h-8 border rounded bg-blue-500 text-white">1</button>
+          <button class="w-8 h-8 border rounded text-gray-700">2</button>
+          <button class="w-8 h-8 border rounded text-gray-700">3</button>
+          <button class="w-8 h-8 border rounded flex items-center justify-center text-gray-700">
+            &gt;
+          </button>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Newsletter -->
+  <section class="border-t bg-white">
+    <div class="max-w-7xl mx-auto px-4 py-8 text-center text-sm">
+      <p class="font-semibold text-gray-800 mb-2">Subscribe on our newsletter</p>
+      <p class="text-gray-500 mb-4">
+        Get daily news on upcoming offers from many suppliers all over the world
+      </p>
+      <form class="flex flex-col sm:flex-row items-center justify-center gap-2 max-w-md mx-auto">
+        <div class="flex items-center border rounded px-3 py-2 w-full sm:w-auto flex-1 bg-white">
+          <span class="inline-block w-4 h-4 bg-gray-300 rounded-full mr-2"></span>
+          <input
+            type="email"
+            placeholder="Email"
+            class="flex-1 text-sm outline-none"
+          />
+        </div>
+        <button
+          type="submit"
+          class="px-4 py-2 bg-blue-500 text-white rounded text-sm font-medium w-full sm:w-auto"
+        >
+          Subscribe
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t mt-4 text-sm text-gray-600">
+    <div class="max-w-7xl mx-auto px-4 py-8 grid grid-cols-12 gap-6">
+      <!-- Brand -->
+      <div class="col-span-12 md:col-span-4 space-y-3">
+        <div class="flex items-center space-x-2">
+          <div class="w-8 h-8 bg-blue-500 rounded flex items-center justify-center text-white font-bold">
+            B
+          </div>
+          <span class="font-semibold text-lg text-gray-800">Brand</span>
+        </div>
+        <p class="text-xs text-gray-500 max-w-xs">
+          Best information about the company goes here but now lorem ipsum is.
+        </p>
+        <div class="flex items-center space-x-2 text-gray-400 text-lg">
+          <span class="w-6 h-6 bg-gray-200 rounded-full inline-block"></span>
+          <span class="w-6 h-6 bg-gray-200 rounded-full inline-block"></span>
+          <span class="w-6 h-6 bg-gray-200 rounded-full inline-block"></span>
+          <span class="w-6 h-6 bg-gray-200 rounded-full inline-block"></span>
+          <span class="w-6 h-6 bg-gray-200 rounded-full inline-block"></span>
+        </div>
+      </div>
+
+      <!-- About -->
+      <div class="col-span-6 md:col-span-2 space-y-2">
+        <h3 class="font-semibold text-gray-800">About</h3>
+        <ul class="space-y-1 text-xs">
+          <li><a href="#" class="hover:text-gray-800">About Us</a></li>
+          <li><a href="#" class="hover:text-gray-800">Find store</a></li>
+          <li><a href="#" class="hover:text-gray-800">Categories</a></li>
+          <li><a href="#" class="hover:text-gray-800">Blogs</a></li>
+        </ul>
+      </div>
+
+      <!-- Partnership -->
+      <div class="col-span-6 md:col-span-2 space-y-2">
+        <h3 class="font-semibold text-gray-800">Partnership</h3>
+        <ul class="space-y-1 text-xs">
+          <li><a href="#" class="hover:text-gray-800">About Us</a></li>
+          <li><a href="#" class="hover:text-gray-800">Find store</a></li>
+          <li><a href="#" class="hover:text-gray-800">Categories</a></li>
+          <li><a href="#" class="hover:text-gray-800">Blogs</a></li>
+        </ul>
+      </div>
+
+      <!-- Information -->
+      <div class="col-span-6 md:col-span-2 space-y-2">
+        <h3 class="font-semibold text-gray-800">Information</h3>
+        <ul class="space-y-1 text-xs">
+          <li><a href="#" class="hover:text-gray-800">Help Center</a></li>
+          <li><a href="#" class="hover:text-gray-800">Money Refund</a></li>
+          <li><a href="#" class="hover:text-gray-800">Shipping</a></li>
+          <li><a href="#" class="hover:text-gray-800">Contact us</a></li>
+        </ul>
+      </div>
+
+      <!-- For users -->
+      <div class="col-span-6 md:col-span-2 space-y-2">
+        <h3 class="font-semibold text-gray-800">For users</h3>
+        <ul class="space-y-1 text-xs">
+          <li><a href="#" class="hover:text-gray-800">Login</a></li>
+          <li><a href="#" class="hover:text-gray-800">Register</a></li>
+          <li><a href="#" class="hover:text-gray-800">Settings</a></li>
+          <li><a href="#" class="hover:text-gray-800">My Orders</a></li>
+        </ul>
+      </div>
+
+      <!-- Get app -->
+      <div class="col-span-12 md:col-span-2 space-y-2">
+        <h3 class="font-semibold text-gray-800">Get app</h3>
+        <div class="space-y-2">
+          <button class="w-32 h-10 bg-black text-white text-xs rounded flex items-center justify-center">
+            App Store
+          </button>
+          <button class="w-32 h-10 bg-black text-white text-xs rounded flex items-center justify-center">
+            Google Play
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-top border-t">
+      <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between text-[11px] text-gray-500">
+        <p>© 2023 Ecommerce.</p>
+        <div class="flex items-center space-x-2">
+          <span class="inline-block w-5 h-3 bg-gray-200 rounded-sm"></span>
+          <span>English</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
