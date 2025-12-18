@@ -58,92 +58,95 @@
 <body class="text-gray-700">
 
     <!-- Header Section -->
-    <header class="bg-white border-b border-gray-200">
-        <!-- Top Bar -->
-        <div class="container mx-auto px-4 lg:px-6 py-4">
-            <div class="flex flex-wrap items-center justify-between gap-4">
-                <!-- Logo -->
-                <a href="./web-main.html" class="flex items-center gap-2 text-blue-500 hover:text-blue-600">
-                    <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600">
-                        <i class="fa-solid fa-bag-shopping text-xl"></i>
+   <header class="bg-white border-b border-gray-200">
+        <!-- Top Section -->
+        <div class="container mx-auto max-w-[1180px] px-4 py-5 flex items-center justify-between gap-8">
+            <!-- Logo -->
+            <a href="./web-main.html" class="flex items-center gap-2 flex-shrink-0">
+                <div class="w-10 h-10 bg-[#0D6EFD] rounded-lg flex items-center justify-center text-white text-xl">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+                <span class="text-[#0D6EFD] text-2xl font-bold tracking-tight">Brand</span>
+            </a>
+
+            <!-- Search Bar -->
+            <div class="flex-grow max-w-[660px]">
+                <div class="flex border border-[#0D6EFD] rounded-md overflow-hidden h-10">
+                    <input type="text" placeholder="Search" class="flex-grow px-4 outline-none text-sm text-gray-700">
+                    <div class="border-l border-[#0D6EFD] relative">
+                        <select
+                            class="h-full px-4 pr-8 bg-white text-sm text-gray-700 outline-none appearance-none cursor-pointer hover:bg-gray-50">
+                            <option>All category</option>
+                            <option>Electronics</option>
+                            <option>Clothes</option>
+                        </select>
+                        <i
+                            class="fa-solid fa-chevron-down absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 text-xs pointer-events-none"></i>
                     </div>
-                    <span class="text-2xl font-bold text-[#8CB7F5]">Brand</span>
+                    <button
+                        class="bg-[#0D6EFD] text-white px-6 text-sm font-medium hover:bg-blue-700 transition">Search</button>
+                </div>
+            </div>
+
+            <!-- User Actions -->
+            <div class="flex items-center gap-6 flex-shrink-0">
+                <a href="#" class="flex flex-col items-center gap-1 text-gray-500 hover:text-gray-800">
+                    <i class="fa-solid fa-user text-lg"></i>
+                    <span class="text-xs text-[#8B96A5]">Profile</span>
                 </a>
-
-                <!-- Search Bar -->
-                <div class="flex-1 max-w-2xl mx-4">
-                    <div class="flex border-2 border-blue-600 rounded-lg overflow-hidden h-[40px]">
-                        <input type="text" placeholder="Search" class="flex-1 px-4 outline-none text-gray-600">
-                        <div class="border-l border-blue-600 relative">
-                            <select class="h-full px-4 pr-8 bg-white outline-none text-gray-600 appearance-none cursor-pointer hover:bg-gray-50">
-                                <option>All category</option>
-                                <option>Electronics</option>
-                                <option>Clothes</option>
-                            </select>
-                            <i class="fa-solid fa-chevron-down absolute right-3 top-1/2 -translate-y-1/2 text-xs text-gray-500 pointer-events-none"></i>
-                        </div>
-                        <button class="bg-blue-600 text-white px-6 font-medium hover:bg-blue-700 transition-colors">Search</button>
-                    </div>
-                </div>
-
-                <!-- User Actions -->
-                <div class="flex items-center gap-6 text-gray-500 text-xs">
-                    <a href="./web-main.html" class="flex flex-col items-center gap-1 hover:text-gray-800">
-                        <i class="fa-solid fa-user text-lg text-gray-400"></i>
-                        <span>Profile</span>
-                    </a>
-                    <a href="./web-main.html" class="flex flex-col items-center gap-1 hover:text-gray-800">
-                        <i class="fa-solid fa-comment-dots text-lg text-gray-400"></i>
-                        <span>Message</span>
-                    </a>
-                    <a href="./web-main.html" class="flex flex-col items-center gap-1 hover:text-gray-800">
-                        <i class="fa-solid fa-heart text-lg text-gray-400"></i>
-                        <span>Orders</span>
-                    </a>
-                    <a href="./web-cart.html" class="flex flex-col items-center gap-1 hover:text-gray-800">
-                        <i class="fa-solid fa-cart-shopping text-lg text-gray-400"></i>
-                        <span>My cart</span>
-                    </a>
-                </div>
+                <a href="#" class="flex flex-col items-center gap-1 text-gray-500 hover:text-gray-800">
+                    <i class="fa-solid fa-message text-lg"></i>
+                    <span class="text-xs text-[#8B96A5]">Message</span>
+                </a>
+                <a href="#" class="flex flex-col items-center gap-1 text-gray-500 hover:text-gray-800">
+                    <i class="fa-solid fa-heart text-lg"></i>
+                    <span class="text-xs text-[#8B96A5]">Orders</span>
+                </a>
+                <a href="./web-cart.html" class="flex flex-col items-center gap-1 text-gray-500 hover:text-gray-800">
+                    <i class="fa-solid fa-cart-shopping text-lg"></i>
+                    <span class="text-xs text-[#8B96A5]">My cart</span>
+                </a>
             </div>
         </div>
 
         <!-- Navigation Bar -->
         <div class="border-t border-gray-200">
-            <div class="container mx-auto px-4 lg:px-6 h-[50px] flex items-center justify-between text-sm font-medium">
-                <div class="flex items-center gap-8 overflow-x-auto">
-                    <a href="./web-gridview.html" class="flex items-center gap-2 text-gray-800 hover:text-blue-600 whitespace-nowrap">
+            <div class="container mx-auto max-w-[1180px] px-4 h-12 flex items-center justify-between">
+                <!-- Left Nav -->
+                <div class="flex items-center gap-6 text-sm font-medium text-gray-800">
+                    <a href="./web-listview.html" class="flex items-center gap-2 hover:text-blue-600">
                         <i class="fa-solid fa-bars"></i>
                         All category
                     </a>
-                    <a href="./web-gridview.html" class="text-gray-800 hover:text-blue-600 whitespace-nowrap">Hot offers</a>
-                    <a href="./web-gridview.html" class="text-gray-800 hover:text-blue-600 whitespace-nowrap">Gift boxes</a>
-                    <a href="./web-gridview.html" class="text-gray-800 hover:text-blue-600 whitespace-nowrap">Projects</a>
-                    <a href="./web-gridview.html" class="text-gray-800 hover:text-blue-600 whitespace-nowrap">Menu item</a>
-                    <a href="./web-gridview.html" class="flex items-center gap-1 text-gray-800 hover:text-blue-600 whitespace-nowrap">
+                    <a href="#" class="hover:text-blue-600">Hot offers</a>
+                    <a href="#" class="hover:text-blue-600">Gift boxes</a>
+                    <a href="#" class="hover:text-blue-600">Projects</a>
+                    <a href="#" class="hover:text-blue-600">Menu item</a>
+                    <a href="#" class="flex items-center gap-1 hover:text-blue-600">
                         Help
-                        <i class="fa-solid fa-chevron-down text-xs"></i>
+                        <i class="fa-solid fa-chevron-down text-xs text-gray-400"></i>
                     </a>
                 </div>
 
-                <div class="flex items-center gap-6 ml-4">
-                    <div class="flex items-center gap-1 cursor-pointer text-gray-800">
+                <!-- Right Nav -->
+                <div class="flex items-center gap-6 text-sm font-medium text-gray-800">
+                    <a href="#" class="flex items-center gap-1 hover:text-blue-600">
                         English, USD
-                        <i class="fa-solid fa-chevron-down text-xs ml-1"></i>
-                    </div>
-                    <div class="flex items-center gap-1 cursor-pointer text-gray-800">
-                        Ship to 
-                        <span class="text-lg leading-none">🇩🇪</span>
-                        <i class="fa-solid fa-chevron-down text-xs"></i>
-                    </div>
+                        <i class="fa-solid fa-chevron-down text-xs text-gray-400"></i>
+                    </a>
+                    <a href="#" class="flex items-center gap-2 hover:text-blue-600">
+                        Ship to
+                        <img src="https://flagcdn.com/w20/de.png" alt="Germany" class="h-4 w-auto">
+                        <i class="fa-solid fa-chevron-down text-xs text-gray-400"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </header>
 
     <!-- Breadcrumb -->
-    <div class="bg-[#F7FAFC] py-4">
-        <div class="container mx-auto px-4 lg:px-6">
+    <div class="bg-[#F7FAFC] py-5">
+        <div class="max-w-[1180px] mx-auto px-4">
             <nav class="text-gray-500 text-sm flex items-center gap-2 overflow-x-auto whitespace-nowrap">
                 <a href="./web-main.html" class="hover:text-gray-800">Home</a>
                 <i class="fa-solid fa-chevron-right text-xs text-gray-400"></i>
@@ -157,7 +160,7 @@
     </div>
 
     <!-- Main Content -->
-    <div class="container mx-auto px-4 lg:px-6 pb-12">
+    <div class="container mx-auto max-w-[1180px] px-4 pb-12">
         <div class="flex flex-col lg:flex-row gap-6">
             
             <!-- Sidebar Filters -->
