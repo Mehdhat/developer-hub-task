@@ -12,7 +12,7 @@ This is my internship project where I implement the **desktop version** of an eC
 - Focus on clean, semantic code and consistent styling.
 
 ## Tech Stack
-- HTML5, CSS3 (Flexbox / Grid), JavaScript
+- HTML5, Tailwind
 - Figma (design reference)
 - Git & GitHub (version control)
 
